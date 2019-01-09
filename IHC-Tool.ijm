@@ -24,7 +24,7 @@ directoryOri = getDirectory("Select your image file");
 Dialog.create("Configuration");
 
 Dialog.addChoice("Images format :", newArray(".TIF", ".JPG"));//Image format to treat
-Dialog.addChoice("Grossissement x :", newArray("5","10","20","40","50"));
+Dialog.addChoice("Magnification x :", newArray("5","10","20","40","50"));
 Dialog.addChoice("Immunostainning :", newArray("Tra98","CREM","Stra8"));
 Dialog.addCheckbox("Necrosis elimination",false);
 Dialog.show();
@@ -220,7 +220,8 @@ run("Watershed");
 
 }else{if(directoryGro== 20){
 run("Properties...", "channels=1 slices=1 frames=1 unit=um pixel_width=0.2280273 pixel_height=0.2285156 voxel_depth=1.0000000");
-	
+	
+
 			if(directoryStain=="Tra98"){
 			setAutoThreshold("Otsu");
 			setOption("BlackBackground", false);
@@ -241,7 +242,8 @@ run("Properties...", "channels=1 slices=1 frames=1 unit=um pixel_width=0.2280273
 			run("Convert to Mask");
 			run("Convert to Mask");
 			run("Remove Outliers...", "radius=12 threshold=50 which=Dark");}}}
-		
+		
+
 		run("Fill Holes");
 		run("Dilate");
 		//run("Fill Holes");
@@ -250,7 +252,8 @@ run("Properties...", "channels=1 slices=1 frames=1 unit=um pixel_width=0.2280273
 		run("Dilate");
 		//run("Dilate");
 		
-		run("Erode");
+		
+run("Erode");
 		run("Erode");
 		run("Erode");
 		//run("Erode");
