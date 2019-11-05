@@ -1,4 +1,4 @@
-﻿// Nicolas Levacher
+// Nicolas Levacher
 // 2019-06
 // Macro name:  IHC_Tool
 // Goals: Counting DAB stained nucleus on testicular tissue + Measuring tissue areas if necessary 
